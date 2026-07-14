@@ -1,0 +1,121 @@
+.home {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.home .hero {
+  height: 90vh;
+  background:
+    linear-gradient(rgba(0, 123, 255, 0.6), rgba(0, 123, 255, 0.6)),
+    url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.home .hero-content {
+  width: 80%;
+  max-width: 700px;
+}
+.home .hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.home .hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+.home .hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.home .btn {
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.home .btn:hover {
+  background: #0056b3;
+  color: white;
+}
+.home .btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.home .btn-outline:hover {
+  background: white;
+  color: #007bff;
+}
+.home .services {
+  padding: 70px 10%;
+  text-align: center;
+}
+.home .services h2 {
+  margin-bottom: 40px;
+  color: #007bff;
+}
+.home .service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+.home .card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.8s;
+}
+.home .card:hover {
+  transform: translateY(-8px);
+}
+.home .card h3 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+.home .card p {
+  color: #555;
+  line-height: 1.6;
+}
+.home .about {
+  background: #f4f4f4;
+  padding: 70px 10%;
+  text-align: center;
+}
+.home .about h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+.home .about p {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+  color: #555;
+}
+.home .footer {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .home .hero h1 {
+    font-size: 35px;
+  }
+  .home .hero p {
+    font-size: 16px;
+  }
+  .home .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

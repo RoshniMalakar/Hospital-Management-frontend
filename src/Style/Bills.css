@@ -1,0 +1,39 @@
+.bills {
+  padding: 10px 20px;
+}
+.bills h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.bills .con {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.bills .con .bill {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.bills .con .bill h2 {
+  background-color: rgb(126, 185, 77);
+  margin: 0px;
+  padding: 5px;
+  font-size: 30px;
+}
+.bills .con .bill p {
+  border-top: 1px solid black;
+  text-align: left;
+  padding: 5px 0px 5px 10px;
+  background-color: rgb(246, 253, 239);
+}
+.bills .total {
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+}
+.bills .total h2 {
+  color: white;
+  padding: 5px;
+  font-size: 30px;
+}

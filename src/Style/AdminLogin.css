@@ -1,0 +1,38 @@
+.admin-login {
+  background: linear-gradient(180deg, blue, skyblue);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin-login form {
+  background-color: rgb(159, 186, 236);
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+.admin-login form h2 {
+  color: rgb(1, 1, 119);
+  margin: 0px;
+  font-size: 35px;
+}
+.admin-login form input {
+  padding: 5px 10px;
+  border: 1px solid gray;
+  outline: none;
+  background: none;
+  color: black;
+}
+.admin-login form button {
+  padding: 5px;
+  background: none;
+  border: 1px solid rgb(2, 2, 112);
+  color: rgb(2, 2, 112);
+  margin-bottom: 5px;
+}
+.admin-login form button:hover {
+  background-color: rgb(2, 2, 112);
+  color: white;
+}

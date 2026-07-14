@@ -1,0 +1,43 @@
+.patient-detail {
+  min-height: 92vh;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+}
+.patient-detail .detail {
+  background-color: white;
+  margin: 5px;
+  text-align: left;
+  padding: 20px;
+  color: black;
+}
+.patient-detail .detail h2 {
+  font-size: 40px;
+}
+.patient-detail .detail p {
+  border-bottom: 1px solid goldenrod;
+  padding: 3px 0px;
+}
+.patient-detail .bills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0px 20px;
+}
+.patient-detail .bills .bill {
+  background-color: white;
+  color: black;
+  text-align: left;
+  border: 1px solid black;
+}
+.patient-detail .bills .bill p {
+  padding: 5px;
+  border-top: 1px solid goldenrod;
+}
+.patient-detail .total {
+  background-color: green;
+  color: black;
+  margin-top: 10px;
+  color: white;
+  padding: 5px;
+}

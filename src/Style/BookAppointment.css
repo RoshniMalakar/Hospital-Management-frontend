@@ -1,0 +1,33 @@
+.book-appointment {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.book-appointment form {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  justify-content: space-around;
+  height: 250px;
+  padding: 10px;
+  background-color: rgb(206, 206, 255);
+  box-shadow: 0px 0px 10px grey;
+}
+.book-appointment form h2 {
+  font-size: 40px;
+  color: blue;
+  text-decoration: underline;
+}
+.book-appointment form input {
+  padding: 5px;
+  outline: none;
+  border: 1px solid gray;
+}
+.book-appointment form button {
+  background-color: blue;
+  border: none;
+  padding: 5px;
+  color: white;
+  font-weight: 600;
+}

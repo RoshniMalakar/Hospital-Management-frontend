@@ -1,0 +1,245 @@
+.admin-panel {
+  display: flex;
+}
+.admin-panel .left {
+  background-color: rgb(0, 31, 78);
+  width: 25%;
+  text-align: left;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.admin-panel .left::-webkit-scrollbar {
+  display: none;
+}
+.admin-panel .left .cont {
+  padding: 20px;
+}
+.admin-panel .left .cont h2 {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 40px;
+}
+.admin-panel .left .cont ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.admin-panel .left .cont ul li {
+  list-style-type: none;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.admin-panel .left .cont ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  font-size: 20px;
+}
+.admin-panel .left .cont ul li:hover {
+  background-color: white;
+  color: black;
+}
+.admin-panel .left .cont ul li:hover a {
+  color: black;
+}
+.admin-panel .right {
+  width: 75%;
+  z-index: 1;
+  background-color: rgb(228, 228, 228);
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.admin-panel .right hr {
+  margin: 0px;
+}
+.admin-panel .right::-webkit-scrollbar {
+  display: none;
+}
+.admin-panel .right .top {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(161, 184, 228);
+}
+.admin-panel .right .top h2 {
+  font-size: 40px;
+}
+.admin-panel .right .patient {
+  background-color: whitesmoke;
+  padding: 20px;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.admin-panel .right .patient::-webkit-scrollbar {
+  display: none;
+}
+.admin-panel .right .patient .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.admin-panel .right .patient .head h2 {
+  font-size: 30px;
+  color: rgb(0, 0, 82);
+  white-space: nowrap;
+}
+.admin-panel .right .patient .head button {
+  background-color: blue;
+  padding: 7px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.admin-panel .right .patient .head .search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  background-color: rgb(216, 215, 215);
+  color: black;
+}
+.admin-panel .right .patient .head .search input {
+  background: none;
+  outline: none;
+  border: none;
+}
+.admin-panel .right .patient table {
+  min-width: 100%;
+  border: 1px solid gainsboro;
+  color: black;
+}
+.admin-panel .right .patient table thead th {
+  border: 1px solid gainsboro;
+  background-color: rgb(198, 198, 252);
+  color: gray;
+  padding: 5px;
+  white-space: nowrap;
+}
+.admin-panel .right .patient table tbody td {
+  border: 1px solid gainsboro;
+  padding: 3px;
+  white-space: nowrap;
+}
+.admin-panel .right .patient table tbody tr {
+  background-color: rgb(231, 231, 255);
+}
+.admin-panel .right .patient table tbody tr button {
+  background-color: rgb(95, 190, 214);
+  padding: 5px;
+  border: none;
+}
+.admin-panel .right .doctor {
+  padding: 20px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 100vh;
+}
+.admin-panel .right .doctor .head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.admin-panel .right .doctor .head::-webkit-scrollbar {
+  display: none;
+}
+.admin-panel .right .doctor .head h2 {
+  font-size: 30px;
+  color: rgb(0, 0, 82);
+  white-space: nowrap;
+}
+.admin-panel .right .doctor .head button {
+  background-color: blue;
+  padding: 7px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.admin-panel .right .doctor .head .search {
+  background-color: rgb(201, 201, 201);
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  gap: 5px;
+  color: black;
+  border-radius: 5px;
+}
+.admin-panel .right .doctor .head .search input {
+  background: none;
+  border: none;
+  outline: none;
+  color: black;
+}
+.admin-panel .right .doctor .doctor-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 0px;
+  background-color: aliceblue;
+}
+.admin-panel .right .doctor .doctor-list button {
+  background-color: red;
+  padding: 5px;
+  border: none;
+  color: white;
+  justify-content: end;
+}
+.admin-panel .right .appointments {
+  min-height: 100vh;
+  background-color: rgb(250, 245, 241);
+}
+.admin-panel .right .appointments {
+  padding: 10px;
+}
+.admin-panel .right .appointments h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+.admin-panel .right .appointments .appoint {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.admin-panel .right .appointments .appoint .card {
+  background-color: rgb(194, 96, 26);
+  color: black;
+  text-align: left;
+  border: 1px solid rgb(194, 96, 26);
+}
+.admin-panel .right .appointments .appoint .card p {
+  border-top: 1px solid rgb(194, 96, 26);
+  padding: 5px 10px;
+  background-color: white;
+}
+
+.admin-panel .right .bills {
+  height: 100vh;
+  background-color: rgb(230, 247, 230);
+}
+.admin-panel .right .bills h2 {
+  text-decoration: underline;
+}
+.admin-panel .right .bills .con .bill h2 {
+  text-decoration: none;
+}
+.admin-panel .right .bills .total h2 {
+  text-decoration: none;
+}
+@media screen and (max-width: 500px) {
+  .admin-panel .right .doctor .doctor-list {
+    grid-template-columns: 1fr;
+  }
+}
