@@ -35,9 +35,20 @@
   border-top: 1px solid goldenrod;
 }
 .patient-detail .total {
-  background-color: green;
+  background-color: rgb(102, 255, 102);
   color: black;
   margin-top: 10px;
-  color: white;
+  color: rgb(46, 46, 46);
+  font-size: 18px;
+  font-weight: 500;
   padding: 5px;
+}
+.patient-detail .total .paybtn{
+  background-color: rgb(32, 167, 19);
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+  margin-top: 5px;
+  border-radius: 10px;
 }

@@ -3,11 +3,16 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import "../Style/PatientDetail.css";
 import Bills from "../Component/Bills";
+import StripeCheckoutModule from "react-stripe-checkout";
 function PatientDetail() {
+  const StripeCheckout = StripeCheckoutModule.default;
   const { id } = useParams();
   const [bills, setBills] = useState([]);
+  const [token, setToken] = useState(localStorage.getItem("token"));
   useEffect(() => {
     fetchDetail();
+    const checktoken = localStorage.getItem("token");
+    setToken(checktoken);
   }, []);
   const [patient, setPatient] = useState([]);
   const fetchDetail = async () => {
@@ -25,17 +30,23 @@ function PatientDetail() {
       setBills(patientBills);
     } catch (err) {
       console.log(err.response?.data || err.message);
+      alert(err.response?.data);
     }
   };
   const totalAmount = bills.reduce((total, bill) => {
     return total + bill.amount;
   }, 0);
+  const pendingAmount = bills.reduce(
+    (total, bill) =>
+      bill.paymentStatus === "unpaid" ? total + bill.amount : total,
+    0,
+  );
   return (
     <div className="patient-detail">
       <div className="detail">
         {patient.map((ptn, index) => (
           <div key={ptn.id} className="patient">
-            <h2>Name: {ptn.name}</h2>
+            <h2 style={{ textDecoration: "underline" }}>Name: {ptn.name}</h2>
             <p>Date of Birth: {ptn.dateofbirth}</p>
             <p>Gender: {ptn.gender}</p>
             <p>Phone: {ptn.phone}</p>
@@ -58,6 +69,29 @@ function PatientDetail() {
         ))}
       </div>
       <div className="total">Total Amount: ₹{totalAmount}/-</div>
+      <div className="total">
+        {bills
+          .filter((bl) => bl.paymentStatus === "unpaid")
+          .map((bl, index) => (
+            <div key={index}>
+              <p>Unpaid: ₹{bl.amount}/-</p>
+            </div>
+          ))}
+        <div>
+          Total Pending:{" "}
+          {pendingAmount > 0 ? `₹${pendingAmount}/-` : "No Pending Amount"}
+          <br />
+          <StripeCheckout
+            token={token}
+            stripeKey="pk_test_51NqsGdSEnDx41uiAy91YixIr2Oa4csspmLIFWFuYRsQmQDnUQfqUi78bCNTmIm8gmdAePgxV4LvW4a4BR3aASFfu00kVsnIvNN"
+            amount={pendingAmount * 100}
+            name="Payment"
+            currency="INR"
+          >
+            <button className="paybtn">Pay Bills</button>
+          </StripeCheckout>
+        </div>
+      </div>
     </div>
   );
 }
