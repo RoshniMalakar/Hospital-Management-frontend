@@ -38,7 +38,7 @@ function Doctorlogin() {
           <label htmlFor="">Doctor's ID</label>
           <input
             type="text"
-            placeholder="Enter Id:101"
+            placeholder="Enter Id:103"
             onChange={(e) => setId(e.target.value)}
           />
         </div>

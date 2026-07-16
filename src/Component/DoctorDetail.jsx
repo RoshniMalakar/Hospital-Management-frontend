@@ -13,7 +13,9 @@ function DoctorDetail() {
   const [appoint, setAppoint] = useState([]);
   const finddoctor = async () => {
     try {
-      const response = await axios.get("http://localhost:6500/api/showdoctor");
+      const response = await axios.get(
+        "https://hospital-management-backend-zfz1.onrender.com/api/showdoctor",
+      );
       const selectedDoctor = response.data.doctor.find((doc) => doc.id == id);
       setDoctor(selectedDoctor);
       const responses = await axios.get(

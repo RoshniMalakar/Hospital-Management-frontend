@@ -21,12 +21,12 @@ const AdminLogin = () => {
         <h2>Admin Login</h2>
         <input
           type="text"
-          placeholder="Enter Username"
+          placeholder="Enter Username:Admin"
           onChange={(e) => setUserName(e.target.value)}
         />
         <input
           type="password"
-          placeholder="Enter Password"
+          placeholder="Enter Password:12345"
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Submit</button>
