@@ -35,7 +35,7 @@ function Patientlogin() {
           <label htmlFor="">Patient's ID</label>
           <input
             type="text"
-            placeholder="Enter Patient Id"
+            placeholder="Enter Patient Id:102"
             onChange={(e) => setId(Number(e.target.value))}
             required
           />
@@ -45,7 +45,7 @@ function Patientlogin() {
           <label htmlFor="">Password</label>
           <input
             type="password"
-            placeholder="Enter Password"
+            placeholder="Enter Password:12345"
             onChange={(e) => setPassword(e.target.value)}
             required
           />
