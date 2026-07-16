@@ -46,6 +46,10 @@ function AdminPanel() {
       ptn.name.toLowerCase().includes(searchP.toLowerCase()) ||
       ptn.id.toString().includes(searchP),
   );
+  const logout = () => {
+    localStorage.removeItem("Admin Token");
+    navigate("/admin/login");
+  };
   return (
     <div className="admin-panel">
       <div className="left">
@@ -68,6 +72,9 @@ function AdminPanel() {
               <a href="#appointments">Appointment</a>
             </li>
           </ul>
+          <button className="logout" onClick={logout}>
+            Logout
+          </button>
         </div>
       </div>
       <div className="right">
